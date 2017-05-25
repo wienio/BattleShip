@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" prefHeight="795.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="52.0" layoutY="27.0" text="Pole Gracza:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="542.0" layoutY="27.0" text="Pole Przeciwnika:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="455.0" text="Czat">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label disable="true" layoutX="513.0" layoutY="489.0" opacity="0.45" text="Napisz wiadomość:" />
+        <TextField fx:id="chatText" layoutX="513.0" layoutY="513.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="403.0" />
+        <CheckBox fx:id="clientCheckBox" layoutX="27.0" layoutY="755.0" mnemonicParsing="false" onAction="#clientCheckBoxClicked" text="Klient" />
+        <CheckBox fx:id="serverCheckBox" layoutX="28.0" layoutY="715.0" mnemonicParsing="false" onAction="#serverCheckBoxClicked" text="Server" />
+      <TextArea fx:id="chatArea" editable="false" layoutX="515.0" layoutY="551.0" prefHeight="200.0" prefWidth="403.0" styleClass="textFieldDisable" stylesheets="@Theme.css" />
+      <Button fx:id="gameStartButton" layoutX="26.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleStartGameButton" prefHeight="34.0" prefWidth="164.0" text="Rozpocznij rozgrywkę!" />
+      <TextArea fx:id="textArea" editable="false" layoutX="28.0" layoutY="469.0" prefHeight="169.0" prefWidth="403.0" />
+      <Button fx:id="startButton" layoutX="100.0" layoutY="711.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="25.0" prefWidth="122.0" text="Start" />
+      <TextField fx:id="textField" layoutX="100.0" layoutY="751.0" prefHeight="25.0" prefWidth="122.0" text="localhost" />
+      <Button fx:id="connectionButton" layoutX="242.0" layoutY="751.0" mnemonicParsing="false" onAction="#handleConnectionButton" prefHeight="25.0" prefWidth="108.0" text="Połącz" />
+      <Button fx:id="resetButton" layoutX="242.0" layoutY="702.0" mnemonicParsing="false" onAction="#handleResetButton" prefHeight="34.0" prefWidth="164.0" text="RESET" />
+      <Button fx:id="randomizeButton" layoutX="222.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleRandomizeButton" prefHeight="34.0" prefWidth="147.0" text="Losuj statki" />
+    </children>
+</AnchorPane>

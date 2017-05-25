@@ -1,0 +1,8 @@
+.gridPane {
+    -fx-opacity: 1;
+    -fx-background-color: yellowgreen;
+}
+
+.textFieldDisable {
+    -fx-opacity: 1;
+}
